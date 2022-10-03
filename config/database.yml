@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: hr_portal_development
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+# test:
+#   <<: *default
+#   database: hr_portal_test
+#   username: postgres
+#   password: postgres
+#   host: localhost
+#   port: 5432
+
+# production:
+#   <<: *default
+#   database: hr_portal_production
+#   username: postgres
+#   password: postgres
+#   host: localhost
+#   port: 5432
